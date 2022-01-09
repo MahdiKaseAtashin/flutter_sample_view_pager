@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: true,
-      home: MyViewPager(),
+      home: HomePage(),
     ));
 
-class MyViewPager extends StatefulWidget {
-  const MyViewPager({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  _MyViewPagerState createState() => _MyViewPagerState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyViewPagerState extends State<MyViewPager> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
