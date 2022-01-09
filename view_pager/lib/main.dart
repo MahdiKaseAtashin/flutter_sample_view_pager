@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:view_pager/FadeAnimation.dart';
+import 'package:view_pager/fade_animation.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
