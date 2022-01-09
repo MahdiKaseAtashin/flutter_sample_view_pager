@@ -1,7 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MaterialApp(
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     ));
 
@@ -13,10 +14,35 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final PageController _pageController = PageController(initialPage: 1)
+    ..addListener(() {
+      if (kDebugMode) {
+        print('object');
+      }
+    });
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      body: PageView(
+        controller: _pageController,
+        children: [
+          Container(
+            color: Colors.greenAccent,
+          ),
+          Container(
+            color: Colors.redAccent,
+          ),
+          Container(
+            color: Colors.blueAccent,
+          ),
+        ],
+      ),
     );
   }
 }
